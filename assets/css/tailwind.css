@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  outline: 1px solid hsla(0, 100%, 50%, 0);
+  font-family: "Inter";
+}
+body {
+  background-color: hsl(208, 75%, 97%);
+  @apply text-gray-800;
+}
+@layer components {
+  .contain-box {
+    @apply mx-20 flex flex-col gap-4 py-5;
+  }
+  .headline {
+    @apply text-xl font-semibold;
+  }
+  .content-box {
+    @apply flex rounded-md bg-slate-100 p-10;
+  }
+  .title-one {
+    @apply text-2xl font-bold;
+  }
+  .title-two {
+    @apply text-base font-semibold;
+  }
+  .title-four {
+    @apply text-sm font-normal;
+    color: hsl(213, 100%, 50%);
+  }
+  .flex-gap {
+    @apply flex gap-2;
+  }
+  .icon-title {
+    width: calc(1rem + 1vw);
+    height: calc(1rem + 1vw);
+  }
+  .card-box {
+    width: 30%;
+    aspect-ratio: 4/5;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    padding: 10px;
+    @apply rounded-lg;
+  }
+  .start-end-box {
+    @apply flex justify-between border-b-2 border-gray-400 py-6 text-sm font-light;
+  }
+  .button-box {
+    border: 1px solid #ddd;
+    width: 15%;
+    justify-content: center;
+    @apply flex items-center gap-4 rounded-lg bg-white p-2 px-4 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-400;
+    /* @apply bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500; */
+  }
+  .service-grid {
+    @apply grid grid-cols-1 gap-6;
+    @apply sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .service-box {
+    @apply flex flex-col gap-4 rounded-md bg-white p-2;
+    height: calc(10rem + 20vw);
+  }
+  .nav-link {
+    @apply font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-red-600;
+  }
+  .tick-item {
+    @apply my-2 flex items-center gap-2;
+  }
+}
