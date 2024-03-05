@@ -12,8 +12,22 @@ body {
   @apply text-gray-800;
 }
 @layer components {
+  .is-mobile {
+    @media screen(sm) {
+      display: none !important;
+    }
+  }
+  .is-desktop {
+    display: none;
+    @media screen(sm) {
+      display: block;
+    }
+  }
   .contain-box {
-    @apply mx-20 flex flex-col gap-4 py-5;
+    @apply mx-5 flex flex-col gap-4 py-5;
+    @media screen(sm) {
+      @apply mx-20;
+    }
   }
   .headline {
     @apply text-xl font-semibold;
@@ -22,7 +36,7 @@ body {
     @apply flex rounded-md bg-slate-100 p-10;
   }
   .title-one {
-    @apply text-2xl font-bold;
+    @apply text-xl font-bold;
   }
   .title-two {
     @apply text-base font-semibold;
@@ -38,23 +52,29 @@ body {
     width: calc(1rem + 1vw);
     height: calc(1rem + 1vw);
   }
-  .card-box {
-    width: 30%;
-    aspect-ratio: 4/5;
-    background-color: #fefefe;
-    border: 1px solid #ddd;
-    padding: 10px;
-    @apply rounded-lg;
-  }
   .start-end-box {
     @apply flex justify-between border-b-2 border-gray-400 py-6 text-sm font-light;
   }
   .button-box {
     border: 1px solid #ddd;
-    width: 15%;
-    justify-content: center;
-    @apply flex items-center gap-4 rounded-lg bg-white p-2 px-4 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-400;
+    @apply flex items-center gap-4 rounded-lg bg-white p-2 px-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-400;
     /* @apply bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500; */
+    @media screen(sm) {
+      justify-content: center;
+      @apply px-4;
+    }
+    @media screen(lg) {
+      width: 15%;
+    }
+  }
+  .service-list {
+    @apply grid grid-cols-2 gap-2;
+    @media screen(sm) {
+      @apply grid-cols-3;
+    }
+    @media screen(lg) {
+      @apply flex justify-between;
+    }
   }
   .service-grid {
     @apply grid grid-cols-1 gap-6;
@@ -62,7 +82,10 @@ body {
   }
   .service-box {
     @apply flex flex-col gap-4 rounded-md bg-white p-2;
-    height: calc(10rem + 20vw);
+    /*  */
+    @media screen(sm) {
+      height: calc(10rem + 20vw);
+    }
   }
   .nav-link {
     @apply font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-red-600;

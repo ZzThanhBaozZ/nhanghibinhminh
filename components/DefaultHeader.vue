@@ -1,22 +1,42 @@
 <template>
   <div class="navbar sticky top-0">
-    <div class="flex items-center justify-between px-20">
+    <div class="nav-container">
       <NuxtLink to="/">
         <svg-icon name="binhminhlogo" class="header-logo" />
       </NuxtLink>
       <nav>
         <ul class="flex gap-10">
           <NuxtLink to="/travel">
-            <h1 class="nav-link">ĐỊA ĐIỂM</h1>
+            <Icon
+              name="ph:map-pin-bold"
+              color="black"
+              class="icon-title is-mobile"
+            />
+            <h1 class="nav-link is-desktop">ĐỊA ĐIỂM</h1>
           </NuxtLink>
           <NuxtLink to="/service">
-            <h1 class="nav-link">DỊCH VỤ</h1>
+            <Icon
+              name="ph:map-pin-bold"
+              color="black"
+              class="icon-title is-mobile"
+            />
+            <h1 class="nav-link is-desktop">DỊCH VỤ</h1>
           </NuxtLink>
           <NuxtLink to="/rent">
-            <h1 class="nav-link">THUÊ PHÒNG</h1>
+            <Icon
+              name="ph:map-pin-bold"
+              color="black"
+              class="icon-title is-mobile"
+            />
+            <h1 class="nav-link is-desktop">THUÊ PHÒNG</h1>
           </NuxtLink>
           <NuxtLink to="/contact">
-            <h1 class="nav-link">LIÊN HỆ</h1>
+            <Icon
+              name="ph:map-pin-bold"
+              color="black"
+              class="icon-title is-mobile"
+            />
+            <h1 class="nav-link is-desktop">LIÊN HỆ</h1>
           </NuxtLink>
         </ul>
       </nav>
@@ -57,8 +77,11 @@ export default {
 
 <style lang="css" scoped>
 .header-logo {
-  width: 100px;
-  height: 100px;
+  width: calc(3rem + 2vw);
+  aspect-ratio: 1/1;
+  @media screen(sm) {
+    width: calc(3rem + 3vw);
+  }
 }
 
 .navbar {
@@ -80,5 +103,11 @@ export default {
 }
 .nuxt-link-active {
   @apply -translate-y-1 scale-110 font-semibold text-red-600 transition delay-150 duration-300 ease-in-out;
+}
+.nav-container {
+  @apply flex items-center justify-between px-5;
+  @media screen(sm) {
+    @apply px-20;
+  }
 }
 </style>

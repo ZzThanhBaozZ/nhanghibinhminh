@@ -9,7 +9,7 @@
         </h4>
       </div>
     </div>
-    <div class="flex justify-between">
+    <div class="location-container">
       <div class="card-box py-2">
         <div
           class="mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2"
@@ -78,4 +78,21 @@
 
 <script setup></script>
 
-<style></style>
+<style>
+.location-container {
+  @media screen(md) {
+    @apply flex justify-between;
+  }
+}
+.card-box {
+  aspect-ratio: 4/5;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  padding: 10px;
+  @apply mb-4 rounded-lg;
+  @media screen(md) {
+    width: 30%;
+    @apply mb-0;
+  }
+}
+</style>

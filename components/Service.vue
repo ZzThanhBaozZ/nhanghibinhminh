@@ -9,7 +9,7 @@
         </h4>
       </div>
     </div>
-    <div class="flex justify-between">
+    <div class="service-list">
       <div class="button-box">
         <Icon name="tabler:bed-filled" color="black" class="icon-title" />
         <h1>Thuê Phòng</h1>
