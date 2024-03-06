@@ -10,68 +10,9 @@
       </div>
     </div>
     <div class="location-container">
-      <div class="card-box py-2">
-        <div
-          class="mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2"
-        >
-          <Icon name="ph:map-pin-bold" color="black" class="icon-title" />
-          <h1 class="title-two">Danh Lam Thắng Cảnh</h1>
-        </div>
-        <div>
-          <div class="start-end-box">
-            <h1>Bảo Tàng Chiến Thắng Lịch Sử Điện Biên Phủ</h1>
-            <h1>0.2km</h1>
-          </div>
-          <div class="start-end-box">
-            <h1>Nghĩa Trang Lịch Sử Điện Biên Phủ</h1>
-            <h1>0.2km</h1>
-          </div>
-          <div class="start-end-box">
-            <h1>Di Tích Lịch Sử Đồi A1</h1>
-            <h1>0.4km</h1>
-          </div>
-          <div class="start-end-box">
-            <h1>Tượng Đài Chiến Thắng Điện Biên Phủ</h1>
-            <h1>1.5km</h1>
-          </div>
-        </div>
-      </div>
-      <div class="card-box py-2">
-        <div
-          class="mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2"
-        >
-          <Icon name="ph:butterfly-bold" color="black" class="icon-title" />
-          <h1 class="title-two">Địa Điểm Du Lịch</h1>
-        </div>
-        <div>
-          <div class="start-end-box">
-            <h1>Hồ Pá Khoang</h1>
-            <h1>18km</h1>
-          </div>
-          <div class="start-end-box">
-            <h1>Đèo Pha Đin</h1>
-            <h1>87km</h1>
-          </div>
-        </div>
-      </div>
-      <div class="card-box py-2">
-        <div
-          class="mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2"
-        >
-          <Icon name="ph:airplane-tilt-bold" color="black" class="icon-title" />
-          <h1 class="title-two">Bến Đỗ</h1>
-        </div>
-        <div>
-          <div class="start-end-box">
-            <h1>Sân bay Điện Biên Phủ</h1>
-            <h1>4km</h1>
-          </div>
-          <div class="start-end-box">
-            <h1>Bến xe Điện Biên Phủ</h1>
-            <h1>4km</h1>
-          </div>
-        </div>
-      </div>
+      <LocationGroupFirst />
+      <LocationGroupSecond />
+      <LocationGroupThird />
     </div>
   </div>
 </template>
@@ -94,5 +35,17 @@
     width: 30%;
     @apply mb-0;
   }
+}
+.dark .card-box {
+  background: rgb(126, 101, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(126, 101, 255, 0.8) 0%,
+    rgba(130, 149, 255, 0.8) 100%
+  );
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 </style>

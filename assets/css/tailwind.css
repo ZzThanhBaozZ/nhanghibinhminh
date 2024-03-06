@@ -8,8 +8,11 @@
   font-family: "Inter";
 }
 body {
-  background-color: hsl(208, 75%, 97%);
-  @apply text-gray-800;
+  background-color: hsl(200, 70%, 97%);
+}
+.dark body {
+  background-color: hsl(220, 70%, 10%);
+  color: #ebf4f1;
 }
 @layer components {
   .is-mobile {
@@ -52,6 +55,9 @@ body {
     width: calc(1rem + 1vw);
     height: calc(1rem + 1vw);
   }
+  .dark .icon-title {
+    filter: invert(100%);
+  }
   .start-end-box {
     @apply flex justify-between border-b-2 border-gray-400 py-6 text-sm font-light;
   }
@@ -92,5 +98,8 @@ body {
   }
   .tick-item {
     @apply my-2 flex items-center gap-2;
+  }
+  .location-holder {
+    @apply mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2;
   }
 }

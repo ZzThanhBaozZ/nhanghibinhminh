@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <DefaultHeader />
-    <slot />
-    <DefaultFooter />
-  </div>
+  <div class="service-box">6</div>
 </template>
 
 <script lang="ts" setup></script>

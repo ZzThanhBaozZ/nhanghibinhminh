@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     onScroll() {
-      this.scrolled = window.scrollY > 25;
+      this.scrolled = window.scrollY > 20;
     },
   },
 };
@@ -95,11 +95,20 @@ export default {
 .navbar-active {
   @apply border-b-2 border-gray-400 py-2;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 15px 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.dark .navbar-active {
+  @apply border-b-2 border-gray-400 py-2;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 .nuxt-link-active {
   @apply -translate-y-1 scale-110 font-semibold text-red-600 transition delay-150 duration-300 ease-in-out;
