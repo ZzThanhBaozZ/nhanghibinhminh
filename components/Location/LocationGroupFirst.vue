@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="card-box py-2">
     <div class="location-holder">
       <Icon name="ph:map-pin-bold" color="black" class="icon-title" />
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-</template>
+</template> -->
 
 <script setup>
 const locations = [

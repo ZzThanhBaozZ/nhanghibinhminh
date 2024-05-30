@@ -12,7 +12,7 @@
               color="black"
               class="icon-title is-mobile"
             />
-            <h1 class="nav-link is-desktop">ĐỊA ĐIỂM</h1>
+            <p class="nav-link is-desktop">ĐỊA ĐIỂM</p>
           </NuxtLink>
           <NuxtLink to="/service">
             <Icon
@@ -20,7 +20,7 @@
               color="black"
               class="icon-title is-mobile"
             />
-            <h1 class="nav-link is-desktop">DỊCH VỤ</h1>
+            <p class="nav-link is-desktop">DỊCH VỤ</p>
           </NuxtLink>
           <NuxtLink to="/rent">
             <Icon
@@ -28,7 +28,7 @@
               color="black"
               class="icon-title is-mobile"
             />
-            <h1 class="nav-link is-desktop">THUÊ PHÒNG</h1>
+            <p class="nav-link is-desktop">THUÊ PHÒNG</p>
           </NuxtLink>
           <NuxtLink to="/contact">
             <Icon
@@ -36,7 +36,7 @@
               color="black"
               class="icon-title is-mobile"
             />
-            <h1 class="nav-link is-desktop">LIÊN HỆ</h1>
+            <p class="nav-link is-desktop">LIÊN HỆ</p>
           </NuxtLink>
         </ul>
       </nav>

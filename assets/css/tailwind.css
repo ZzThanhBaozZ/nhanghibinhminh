@@ -1,12 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  outline: 1px solid hsla(0, 100%, 50%, 0);
-  font-family: "Inter";
+  outline: 1px solid rgba(255, 0, 0, 0.9);
 }
+
+:root {
+  --font-size-sm: clamp(0.67rem, 0.32vi + 0.6rem, 0.89rem);
+  --font-size-base: clamp(0.75rem, 0.36vi + 0.68rem, 1rem);
+  --font-size-lg: clamp(0.84rem, 0.4vi + 0.76rem, 1.13rem);
+  --font-size-xl: clamp(0.95rem, 0.45vi + 0.86rem, 1.27rem);
+  --font-size-2xl: clamp(1.07rem, 0.51vi + 0.97rem, 1.42rem);
+  --font-size-3xl: clamp(1.2rem, 0.57vi + 1.09rem, 1.6rem);
+  --font-size-4xl: clamp(1.35rem, 0.64vi + 1.22rem, 1.8rem);
+  --font-size-5xl: clamp(1.52rem, 0.72vi + 1.38rem, 2.03rem);
+  --font-size-6xl: clamp(1.71rem, 0.81vi + 1.55rem, 2.28rem);
+}
+
 body {
   background-color: hsl(200, 70%, 97%);
 }
@@ -14,6 +28,61 @@ body {
   background-color: hsl(220, 70%, 10%);
   color: #ebf4f1;
 }
+
+@layer base {
+  h1 {
+    @apply font-black;
+    font-size: var(--font-size-6xl);
+    line-height: calc(var(--font-size-6xl) + 1.5vw);
+  }
+  h2 {
+    @apply font-extrabold;
+    font-size: var(--font-size-5xl);
+    line-height: calc(var(--font-size-5xl) + 1.25vw);
+  }
+  h3 {
+    @apply font-bold;
+    font-size: var(--font-size-4xl);
+    line-height: calc(var(--font-size-4xl) + 1vw);
+  }
+  h4 {
+    @apply font-semibold;
+    font-size: var(--font-size-3xl);
+    line-height: calc(var(--font-size-3xl) + 0.75vw);
+  }
+  h5 {
+    @apply font-medium;
+    font-size: var(--font-size-2xl);
+    line-height: calc(var(--font-size-2xl) + 0.5vw);
+  }
+  h6 {
+    @apply font-normal;
+    font-size: var(--font-size-xl);
+    line-height: calc(var(--font-size-xl) + 0.25vw);
+  }
+  p {
+    @apply font-light;
+    font-size: var(--font-size-lg);
+  }
+  small {
+    @apply font-extralight;
+    font-size: var(--font-size-base);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 @layer components {
   .is-mobile {
     @media screen(sm) {
@@ -101,5 +170,72 @@ body {
   }
   .location-holder {
     @apply mb-4 flex items-center gap-2 border-b-2 border-b-black pb-2;
+  }
+}
+
+@layer utilities {
+  .mx1 {
+    margin-left: calc(0.8rem + 3.2vw);
+    margin-right: calc(0.8rem + 3.2vw);
+  }
+  .my1 {
+    margin-top: calc(3.2vh + 3.2vw);
+    margin-bottom: calc(3.2vh + 3.2vw);
+  }
+  .mx2 {
+    margin-left: calc(0.4rem + 1.6vw);
+    margin-right: calc(0.4rem + 1.6vw);
+  }
+  .my2 {
+    margin-top: calc(1.6vh + 1.6vw);
+    margin-bottom: calc(1.6vh + 1.6vw);
+  }
+  .mx3 {
+    margin-left: calc(0.2rem + 0.8vw);
+    margin-right: calc(0.2rem + 0.8vw);
+  }
+  .my3 {
+    margin-top: calc(0.8vh + 0.8vw);
+    margin-bottom: calc(0.8vh + 0.8vw);
+  }
+  .mx4 {
+    margin-left: calc(0.1rem + 0.4vw);
+    margin-right: calc(0.1rem + 0.4vw);
+  }
+  .my4 {
+    margin-top: calc(0.4vh + 0.4vw);
+    margin-bottom: calc(0.4vh + 0.4vw);
+  }
+  .px1 {
+    padding-left: calc(0.8rem + 3.2vw);
+    padding-right: calc(0.8rem + 3.2vw);
+  }
+  .py1 {
+    padding-top: calc(3.2vh + 3.2vw);
+    padding-bottom: calc(3.2vh + 3.2vw);
+  }
+  .px2 {
+    padding-left: calc(0.4rem + 1.6vw);
+    padding-right: calc(0.4rem + 1.6vw);
+  }
+  .py2 {
+    padding-top: calc(1.6vh + 1.6vw);
+    padding-bottom: calc(1.6vh + 1.6vw);
+  }
+  .px3 {
+    padding-left: calc(0.2rem + 0.8vw);
+    padding-right: calc(0.2rem + 0.8vw);
+  }
+  .py3 {
+    padding-top: calc(0.8vh + 0.8vw);
+    padding-bottom: calc(0.8vh + 0.8vw);
+  }
+  .px4 {
+    padding-left: calc(0.1rem + 0.4vw);
+    padding-right: calc(0.1rem + 0.4vw);
+  }
+  .py4 {
+    padding-top: calc(0.4vh + 0.4vw);
+    padding-bottom: calc(0.4vh + 0.4vw);
   }
 }

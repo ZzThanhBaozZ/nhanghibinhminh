@@ -9,10 +9,16 @@
         </h4>
       </div>
     </div>
-    <div class="location-container">
-      <LocationGroupFirst />
+    <!-- <div class="location-container"> -->
+    <div class="">
+      <div>
+        <h2>Danh Lam Thắng Cảnh</h2>
+      </div>
+      <div class="m-4 p-4">bbb</div>
+      <div class="m-4 p-4">ccc</div>
+      <!-- <LocationGroupFirst />
       <LocationGroupSecond />
-      <LocationGroupThird />
+      <LocationGroupThird /> -->
     </div>
   </div>
 </template>
