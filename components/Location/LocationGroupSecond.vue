@@ -1,26 +1,26 @@
 <template>
-  <div class="card-box py-2">
-    <div class="location-holder">
+  <div
+    class="my3 px3 py3 border-a col-start-3 col-end-5 row-start-2 h-[30rem] rounded-lg bg-gray-200 dark:bg-[rgb(25,25,25)]"
+  >
+    <h5>
       <Icon name="ph:butterfly-bold" color="black" class="icon-title" />
-      <h1 class="title-two">Địa Điểm Du Lịch</h1>
-    </div>
-    <div>
-      <div
-        class="start-end-box"
-        v-for="(location, index) in locations"
-        :key="index"
-      >
-        <h1>{{ location.name }}</h1>
-        <h1>{{ location.distance }}</h1>
-      </div>
+      Địa Điểm Du Lịch
+    </h5>
+    <div
+      class="start-end-box"
+      v-for="(location, index) in locations"
+      :key="index"
+    >
+      <p>{{ location.name }}</p>
+      <p class="data-number">{{ location.distance }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
 const locations = [
-  { name: "Hồ Pá Khoang", distance: "18km" },
-  { name: "Đèo Pha Đin", distance: "87km" },
+  { name: "Hồ Pá Khoang", distance: "18 km" },
+  { name: "Đèo Pha Đin", distance: "87 km" },
 ];
 </script>
 

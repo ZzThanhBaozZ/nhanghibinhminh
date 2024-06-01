@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.9);
+  outline: 1px solid rgba(255, 0, 0, 0.0009);
+  transition: 0.2s ease-in-out;
 }
 
 :root {
@@ -21,17 +23,28 @@
   --font-size-6xl: clamp(1.71rem, 0.81vi + 1.55rem, 2.28rem);
 }
 
+.hero-text {
+  font-family: "Ballet";
+}
+
+.hero-img {
+  width: 75%;
+  aspect-ratio: 8/7;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
 body {
-  background-color: hsl(200, 70%, 97%);
+  background-color: #f0f0f0;
 }
 .dark body {
-  background-color: hsl(220, 70%, 10%);
-  color: #ebf4f1;
+  background-color: #1e1e1e;
+  color: #fff;
 }
 
 @layer base {
   h1 {
-    @apply font-black;
+    @apply font-black font-bold tracking-widest;
     font-size: var(--font-size-6xl);
     line-height: calc(var(--font-size-6xl) + 1.5vw);
   }
@@ -41,7 +54,7 @@ body {
     line-height: calc(var(--font-size-5xl) + 1.25vw);
   }
   h3 {
-    @apply font-bold;
+    @apply font-bold tracking-wider;
     font-size: var(--font-size-4xl);
     line-height: calc(var(--font-size-4xl) + 1vw);
   }
@@ -51,7 +64,7 @@ body {
     line-height: calc(var(--font-size-3xl) + 0.75vw);
   }
   h5 {
-    @apply font-medium;
+    @apply font-medium tracking-wide;
     font-size: var(--font-size-2xl);
     line-height: calc(var(--font-size-2xl) + 0.5vw);
   }
@@ -67,6 +80,7 @@ body {
   small {
     @apply font-extralight;
     font-size: var(--font-size-base);
+    color: hsl(51, 70%, 48%);
   }
 }
 
@@ -78,11 +92,19 @@ h5,
 h6,
 p,
 small {
-  font-family: "Inter", sans-serif;
+  font-family: "Playfair Display", "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
+h3::after {
+  content: "";
+  display: inline-block;
+  width: 2.5vw;
+  height: 2px;
+  background-color: hsl(51, 70%, 48%);
+  margin: calc(0.2rem + 0.2vw) 0.5vw;
+}
 @layer components {
   .is-mobile {
     @media screen(sm) {
@@ -125,10 +147,10 @@ small {
     height: calc(1rem + 1vw);
   }
   .dark .icon-title {
-    filter: invert(100%);
+    filter: invert(0%);
   }
   .start-end-box {
-    @apply flex justify-between border-b-2 border-gray-400 py-6 text-sm font-light;
+    @apply mt-4 flex justify-between border-b-2 border-gray-400 py-4 text-sm font-light;
   }
   .button-box {
     border: 1px solid #ddd;
@@ -174,68 +196,75 @@ small {
 }
 
 @layer utilities {
+  .data-number {
+    font-family: "Inter", sans-serif;
+  }
+  .border-a {
+    border-left: 5px ridge hsl(51, 70%, 48%);
+    border-left-width: 1rem;
+  }
   .mx1 {
-    margin-left: calc(0.8rem + 3.2vw);
-    margin-right: calc(0.8rem + 3.2vw);
+    margin-left: calc(0.8rem + 6.4vw);
+    margin-right: calc(0.8rem + 6.4vw);
   }
   .my1 {
-    margin-top: calc(3.2vh + 3.2vw);
-    margin-bottom: calc(3.2vh + 3.2vw);
+    margin-top: calc(3.2vh + 6.4vw);
+    margin-bottom: calc(3.2vh + 6.4vw);
   }
   .mx2 {
-    margin-left: calc(0.4rem + 1.6vw);
-    margin-right: calc(0.4rem + 1.6vw);
+    margin-left: calc(0.4rem + 3.2vw);
+    margin-right: calc(0.4rem + 3.2vw);
   }
   .my2 {
-    margin-top: calc(1.6vh + 1.6vw);
-    margin-bottom: calc(1.6vh + 1.6vw);
+    margin-top: calc(1.6vh + 3.2vw);
+    margin-bottom: calc(1.6vh + 3.2vw);
   }
   .mx3 {
-    margin-left: calc(0.2rem + 0.8vw);
-    margin-right: calc(0.2rem + 0.8vw);
+    margin-left: calc(0.2rem + 1.6vw);
+    margin-right: calc(0.2rem + 1.6vw);
   }
   .my3 {
-    margin-top: calc(0.8vh + 0.8vw);
-    margin-bottom: calc(0.8vh + 0.8vw);
+    margin-top: calc(0.8vh + 1.6vw);
+    margin-bottom: calc(0.8vh + 1.6vw);
   }
   .mx4 {
-    margin-left: calc(0.1rem + 0.4vw);
-    margin-right: calc(0.1rem + 0.4vw);
+    margin-left: calc(0.1rem + 0.8vw);
+    margin-right: calc(0.1rem + 0.8vw);
   }
   .my4 {
-    margin-top: calc(0.4vh + 0.4vw);
-    margin-bottom: calc(0.4vh + 0.4vw);
+    margin-top: calc(0.4vh + 0.8vw);
+    margin-bottom: calc(0.4vh + 0.8vw);
   }
   .px1 {
-    padding-left: calc(0.8rem + 3.2vw);
-    padding-right: calc(0.8rem + 3.2vw);
+    padding-left: calc(0.8rem + 6.4vw);
+    padding-right: calc(0.8rem + 6.4vw);
   }
   .py1 {
-    padding-top: calc(3.2vh + 3.2vw);
-    padding-bottom: calc(3.2vh + 3.2vw);
+    padding-top: calc(3.2vh + 6.4vw);
+    padding-bottom: calc(3.2vh + 6.4vw);
   }
   .px2 {
-    padding-left: calc(0.4rem + 1.6vw);
-    padding-right: calc(0.4rem + 1.6vw);
+    padding-left: calc(0.4rem + 3.2vw);
+    padding-right: calc(0.4rem + 3.2vw);
   }
   .py2 {
-    padding-top: calc(1.6vh + 1.6vw);
-    padding-bottom: calc(1.6vh + 1.6vw);
+    padding-top: calc(1.6vh + 3.2vw);
+    padding-bottom: calc(1.6vh + 3.2vw);
   }
   .px3 {
-    padding-left: calc(0.2rem + 0.8vw);
-    padding-right: calc(0.2rem + 0.8vw);
+    padding-left: calc(0.2rem + 1.6vw);
+    padding-right: calc(0.2rem + 1.6vw);
   }
   .py3 {
-    padding-top: calc(0.8vh + 0.8vw);
-    padding-bottom: calc(0.8vh + 0.8vw);
+    padding-top: calc(0.8vh + 1.6vw);
+    padding-bottom: calc(0.8vh + 1.6vw);
   }
   .px4 {
-    padding-left: calc(0.1rem + 0.4vw);
-    padding-right: calc(0.1rem + 0.4vw);
+    padding-left: calc(0.1rem + 0.8vw);
+    padding-right: calc(0.1rem + 0.8vw);
   }
   .py4 {
-    padding-top: calc(0.4vh + 0.4vw);
-    padding-bottom: calc(0.4vh + 0.4vw);
+    padding-top: calc(0.4vh + 0.8vw);
+    padding-bottom: calc(0.4vh + 0.8vw);
   }
 }

@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/svg-sprite",
     "nuxt-icon",
     "@nuxtjs/color-mode",
+    "@nuxt/image"
   ],
   colorMode: {
     preference: "system", // default value of $colorMode.preference
