@@ -37,15 +37,15 @@
               class="icon-title is-mobile"
             />
             <p class="nav-link is-desktop">THUÊ PHÒNG</p>
-          </NuxtLink>
+          </NuxtLink> -->
           <NuxtLink to="/contact">
             <Icon
-              name="ph:map-pin-bold"
+              name="hugeicons:contact-02"
               color="black"
               class="icon-title is-mobile"
             />
             <p class="nav-link is-desktop">LIÊN HỆ</p>
-          </NuxtLink> -->
+          </NuxtLink>
         </ul>
       </nav>
     </div>

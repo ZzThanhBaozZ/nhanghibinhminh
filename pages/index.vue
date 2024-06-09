@@ -18,7 +18,7 @@
             <p class="mt-10">
               Tọa lạc tại vị trí thuận lợi nhất trong trung tâm thành phố, Nhà
               Nghỉ Bình Minh là điểm dừng chân lý tưởng cho du khách muốn thăm
-              qua danh lam thắng cảnh và di tích lịch sử Điện Biên Phủ
+              quan danh lam thắng cảnh và di tích lịch sử Điện Biên Phủ
             </p>
             <br />
             <p>
@@ -29,7 +29,7 @@
               class="my-8 inline-block rounded-full bg-[hsl(0,70%,50%)] px-4 py-2 text-white hover:scale-105 dark:bg-[hsl(0,90%,30%)]"
             >
               <p>
-                Xem thêm
+                <NuxtLink to="/contact"> Liên hệ ngay </NuxtLink>
                 <Icon
                   name="ph:arrow-right-light"
                   color="white"
@@ -100,6 +100,91 @@
         <LocationGroupFirst />
         <LocationGroupSecond />
         <LocationGroupThird />
+      </div>
+    </section>
+    <section class="mx2 my2 lg:mx1 lg:my1">
+      <h3 class="right-line">Không gian nhà nghỉ</h3>
+      <small>Không gian rộng rãi, ấm cúng</small>
+      <div class="my4 lg:my3 flex flex-col gap-8">
+        <div>
+          <h5 class="my4">Sân Trước</h5>
+          <div class="card-container h-[20rem] justify-center lg:h-auto">
+            <div
+              class="card-display flex h-[20rem] items-end rounded-lg bg-gray-700 lg:h-[40rem] lg:flex-[2_2_0%]"
+              id="park-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Chỗ Để Xe
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 class="my4">Phòng Khách</h5>
+          <div
+            class="card-container flex h-[50rem] flex-col justify-center gap-4 lg:h-auto lg:flex-row"
+          >
+            <div
+              class="card-display flex h-[20rem] items-end rounded-lg bg-gray-700 lg:h-[40rem] lg:flex-[2_2_0%]"
+              id="lobby-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Lễ Tân
+              </h6>
+            </div>
+            <div
+              class="card-display flex h-[20rem] flex-1 items-end rounded-lg bg-gray-700 lg:h-[40rem]"
+              id="elavator-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Thang Máy
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 class="my4">Phòng Thuê</h5>
+          <div
+            class="card-container flex h-[50rem] flex-col justify-center gap-4 lg:h-auto lg:flex-row"
+          >
+            <div
+              class="card-display flex h-[20rem] flex-1 items-end rounded-lg bg-gray-700 lg:hover:flex-[2_2_0%]"
+              id="one-bed-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Phòng 1 giường
+              </h6>
+            </div>
+            <div
+              class="card-display flex h-[20rem] flex-1 items-end rounded-lg bg-gray-700 lg:hover:flex-[2_2_0%]"
+              id="two-bed-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Phòng 2 giường
+              </h6>
+            </div>
+            <div
+              class="card-display flex h-[20rem] flex-1 items-end rounded-lg bg-gray-700 lg:hover:flex-[2_2_0%]"
+              id="three-bed-img"
+            >
+              <h6
+                class="m-4 rounded-md border bg-gray-200 px-4 py-2 drop-shadow-2xl dark:bg-[rgb(25,25,25)]"
+              >
+                Phòng 3 giường
+              </h6>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="mx2 my2 lg:mx1 lg:my1">

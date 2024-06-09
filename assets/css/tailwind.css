@@ -8,7 +8,7 @@
 
 * {
   outline: 1px solid rgba(255, 0, 0, 0.0009);
-  transition: 0.1s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 :root {
@@ -33,6 +33,55 @@
   aspect-ratio: 8/7;
   object-fit: cover;
   object-position: 50% 40%;
+}
+
+.card-container:hover > div:not(:hover) {
+  opacity: 0.6;
+}
+
+.card-container > div > h6 {
+  opacity: 0;
+}
+
+.card-container:hover > div:hover > h6 {
+  opacity: 1;
+}
+.card-display {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center;
+}
+
+#park-img {
+  background-image: url("/park.jpg");
+  background-position-y: 50%;
+  background-position-x: 20%;
+}
+
+#lobby-img {
+  background-image: url("/lobby.jpg");
+  background-position-y: 80%;
+}
+
+#elavator-img {
+  background-image: url("/elavator.jpg");
+  background-position-y: 70%;
+}
+
+#one-bed-img {
+  background-image: url("/one-bed.jpg");
+  background-position-y: 80%;
+}
+
+#two-bed-img {
+  background-image: url("/two-bed.jpg");
+  background-position-y: 95%;
+}
+
+#three-bed-img {
+  background-image: url("/three-bed.jpg");
+  background-position-y: 100%;
 }
 
 body {

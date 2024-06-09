@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <h1>Đây là trang liên hệ!</h1>
-    <div class="contain-box my-20 bg-cyan-500">
-      <h1>Tạm thời: Giới thiệu chủ nhà</h1>
-    </div>
-    <div class="contain-box my-20 bg-cyan-500">
-      <h1>Tạm thời: Liệt kê các dạng liên hệ (điện thoại, ....)</h1>
-    </div>
-    <div class="contain-box my-20 bg-cyan-500">
-      <h1>Tạm thời: Khung thời gian hoạt động (24/7)</h1>
-    </div>
-    <div class="contain-box my-20 bg-cyan-500">
-      <h1>Tạm thời: [Khung đặt biệt cho đặt phòng số lượng lớn]</h1>
+  <div class="mx1 my1">
+    <div class="flex flex-col items-center justify-center gap-8">
+      <NuxtImg
+        src="/qr-zalo.png"
+        :placeholder="[50, 25, 75, 5]"
+        class="w-[10rem] rounded-md border-8"
+      />
+      <div>
+        <h6>Số điện thoại: <a href="tel:0915587455">0915587455</a></h6>
+      </div>
     </div>
   </div>
 </template>

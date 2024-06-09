@@ -18,7 +18,7 @@
       class="my-8 inline-block rounded-full bg-[hsl(0,70%,50%)] px-4 py-2 text-white hover:scale-105 dark:bg-[hsl(0,90%,30%)]"
     >
       <p>
-        Xem thêm
+        <NuxtLink to="/contact"> Liên hệ ngay </NuxtLink>
         <Icon name="ph:arrow-right-light" color="white" class="icon-a" />
       </p>
     </div>
