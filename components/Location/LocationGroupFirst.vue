@@ -1,6 +1,6 @@
 <template>
   <div
-    class="my3 px3 py3 border-a col-start-1 col-end-3 h-[30rem] rounded-lg bg-gray-200 dark:bg-[rgb(25,25,25)]"
+    class="my3 px3 py3 border-a col-start-1 col-end-3 rounded-lg bg-gray-200 dark:bg-[rgb(25,25,25)] lg:h-[30rem]"
   >
     <h5>
       <Icon name="ph:map-pin-bold" color="black" class="icon-title" />Danh Lam
@@ -17,10 +17,12 @@
       </div>
     </div>
     <div
-      class="my-8 inline-block rounded-full bg-[hsl(0,70%,50%)] px-4 py-2 hover:scale-105 dark:bg-[hsl(0,90%,30%)]"
+      class="my-8 inline-block rounded-full bg-[hsl(0,70%,50%)] px-4 py-2 text-white hover:scale-105 dark:bg-[hsl(0,90%,30%)]"
     >
-      Xem thêm
-      <Icon name="ph:arrow-right-light" color="black" class="icon-title" />
+      <p>
+        Xem thêm
+        <Icon name="ph:arrow-right-light" color="white" class="icon-a" />
+      </p>
     </div>
   </div>
 </template>

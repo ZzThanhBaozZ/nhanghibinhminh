@@ -8,7 +8,7 @@
 
 * {
   outline: 1px solid rgba(255, 0, 0, 0.0009);
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 :root {
@@ -21,6 +21,7 @@
   --font-size-4xl: clamp(1.35rem, 0.64vi + 1.22rem, 1.8rem);
   --font-size-5xl: clamp(1.52rem, 0.72vi + 1.38rem, 2.03rem);
   --font-size-6xl: clamp(1.71rem, 0.81vi + 1.55rem, 2.28rem);
+  --golden-color: hsl(50, 65%, 45%);
 }
 
 .hero-text {
@@ -46,32 +47,32 @@ body {
   h1 {
     @apply font-black font-bold tracking-widest;
     font-size: var(--font-size-6xl);
-    line-height: calc(var(--font-size-6xl) + 1.5vw);
+    line-height: calc(var(--font-size-6xl) + 1.2vw);
   }
   h2 {
     @apply font-extrabold;
     font-size: var(--font-size-5xl);
-    line-height: calc(var(--font-size-5xl) + 1.25vw);
+    line-height: calc(var(--font-size-5xl) + 1vw);
   }
   h3 {
     @apply font-bold tracking-wider;
     font-size: var(--font-size-4xl);
-    line-height: calc(var(--font-size-4xl) + 1vw);
+    line-height: calc(var(--font-size-4xl) + 0.8vw);
   }
   h4 {
     @apply font-semibold;
     font-size: var(--font-size-3xl);
-    line-height: calc(var(--font-size-3xl) + 0.75vw);
+    line-height: calc(var(--font-size-3xl) + 0.6vw);
   }
   h5 {
     @apply font-medium tracking-wide;
     font-size: var(--font-size-2xl);
-    line-height: calc(var(--font-size-2xl) + 0.5vw);
+    line-height: calc(var(--font-size-2xl) + 0.4vw);
   }
   h6 {
     @apply font-normal;
     font-size: var(--font-size-xl);
-    line-height: calc(var(--font-size-xl) + 0.25vw);
+    line-height: calc(var(--font-size-xl) + 0.2vw);
   }
   p {
     @apply font-light;
@@ -80,7 +81,7 @@ body {
   small {
     @apply font-extralight;
     font-size: var(--font-size-base);
-    color: hsl(51, 70%, 48%);
+    color: var(--golden-color);
   }
 }
 
@@ -97,14 +98,23 @@ small {
   font-style: normal;
 }
 
-h3::after {
+h3:is(.right-line)::after {
   content: "";
   display: inline-block;
   width: 2.5vw;
   height: 2px;
-  background-color: hsl(51, 70%, 48%);
+  background-color: var(--golden-color);
   margin: calc(0.2rem + 0.2vw) 0.5vw;
 }
+
+.is-golden-color {
+  color: var(--golden-color);
+}
+
+.is-golden-border {
+  border-color: var(--golden-color);
+}
+
 @layer components {
   .is-mobile {
     @media screen(sm) {
@@ -147,14 +157,17 @@ h3::after {
     height: calc(1rem + 1vw);
   }
   .dark .icon-title {
-    filter: invert(0%);
+    filter: invert(100%);
   }
   .start-end-box {
-    @apply mt-4 flex justify-between border-b-2 border-gray-400 py-4 text-sm font-light;
+    @apply mt-2 flex justify-between border-b-2 border-gray-400 py-2 text-sm font-light;
+    @media screen(md) {
+      @apply mt-4 py-4;
+    }
   }
   .button-box {
     border: 1px solid #ddd;
-    @apply flex items-center gap-4 rounded-lg bg-white p-2 px-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-400;
+    @apply my3 flex flex-1 items-center gap-4 rounded-lg bg-gray-200 p-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-400 dark:bg-[rgb(25,25,25)];
     /* @apply bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500; */
     @media screen(sm) {
       justify-content: center;
@@ -178,10 +191,13 @@ h3::after {
     @apply sm:grid-cols-2 lg:grid-cols-3;
   }
   .service-box {
-    @apply flex flex-col gap-4 rounded-md bg-white p-2;
+    @apply flex flex-col gap-4 rounded-md bg-gray-200 p-3 px-4 dark:bg-[rgb(25,25,25)];
     /*  */
-    @media screen(sm) {
-      height: calc(10rem + 20vw);
+    @media screen(md) {
+      max-height: calc(8rem + 20vw);
+    }
+    @media screen(lg) {
+      max-height: calc(12rem + 20vw);
     }
   }
   .nav-link {
@@ -199,9 +215,13 @@ h3::after {
   .data-number {
     font-family: "Inter", sans-serif;
   }
+  .icon-a {
+    width: calc(1rem + 1vw);
+    height: calc(1rem + 1vw);
+  }
   .border-a {
-    border-left: 5px ridge hsl(51, 70%, 48%);
-    border-left-width: 1rem;
+    border-left: 5px ridge var(--golden-color);
+    border-left-width: calc(0.8rem + 0.4vw);
   }
   .mx1 {
     margin-left: calc(0.8rem + 6.4vw);

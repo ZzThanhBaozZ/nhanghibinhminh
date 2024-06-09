@@ -1,7 +1,7 @@
 <template>
-  <div class="service-box">
+  <div class="service-box flex-1">
     <div>
-      <h1 class="font-semibold">Gara Xe</h1>
+      <h6 class="font-semibold">Gara Xe</h6>
       <div class="tick-item" v-for="(item, index) in First" :key="index">
         <Icon
           name="icon-park-outline:correct"
@@ -9,13 +9,13 @@
           class="icon-sm"
         />
         <div class="flex w-full justify-between">
-          <h2>{{ item.attr1 }}</h2>
-          <h2>{{ item.attr2 }}</h2>
+          <p>{{ item.attr1 }}</p>
+          <p>{{ item.attr2 }}</p>
         </div>
       </div>
     </div>
     <div>
-      <h1 class="font-semibold">Bãi Đỗ Xe Rộng Rãi</h1>
+      <h6 class="font-semibold">Bãi Đỗ Xe Rộng Rãi</h6>
       <div class="tick-item" v-for="(item, index) in Second" :key="index">
         <Icon
           name="icon-park-outline:correct"
@@ -23,8 +23,8 @@
           class="icon-sm"
         />
         <div class="flex w-full justify-between">
-          <h2>{{ item.attr1 }}</h2>
-          <h2>{{ item.attr2 }}</h2>
+          <p>{{ item.attr1 }}</p>
+          <p>{{ item.attr2 }}</p>
         </div>
       </div>
     </div>

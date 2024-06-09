@@ -1,12 +1,20 @@
 <template>
-  <div class="navbar sticky top-0">
+  <div class="navbar sticky top-0 z-20">
     <div class="nav-container">
       <NuxtLink to="/">
         <svg-icon name="binhminhlogo" class="header-logo" />
       </NuxtLink>
       <nav>
         <ul class="flex gap-10">
-          <NuxtLink to="/travel">
+          <select
+            v-model="$colorMode.preference"
+            class="hidden rounded-lg border border-gray-500 bg-white p-1 font-semibold text-black md:block"
+          >
+            <option value="system"><p>Hệ thống</p></option>
+            <option value="light"><p>Sáng</p></option>
+            <option value="dark"><p>Tối</p></option>
+          </select>
+          <!-- <NuxtLink to="/travel">
             <Icon
               name="ph:map-pin-bold"
               color="black"
@@ -37,7 +45,7 @@
               class="icon-title is-mobile"
             />
             <p class="nav-link is-desktop">LIÊN HỆ</p>
-          </NuxtLink>
+          </NuxtLink> -->
         </ul>
       </nav>
     </div>

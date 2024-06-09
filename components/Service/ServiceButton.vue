@@ -2,7 +2,7 @@
   <div class="service-list">
     <div class="button-box" v-for="(service, index) in services" :key="index">
       <Icon :name="service.icon_name" color="black" class="icon-title" />
-      <h1>{{ service.name }}</h1>
+      <p>{{ service.name }}</p>
     </div>
   </div>
 </template>

@@ -1,14 +1,14 @@
 <template>
-  <div class="service-box">
+  <div class="service-box flex-1">
     <div>
-      <h1 class="font-semibold">Mạng Cung Cấp</h1>
+      <h6 class="font-semibold">Mạng Cung Cấp</h6>
       <div class="tick-item">
         <Icon
           name="icon-park-outline:correct"
           color="#32CD32"
           class="icon-sm"
         />
-        <h2>HOÀN TOÀN MIỄN PHÍ</h2>
+        <p>HOÀN TOÀN MIỄN PHÍ</p>
       </div>
       <div class="tick-item">
         <Icon
@@ -17,8 +17,8 @@
           class="icon-sm"
         />
         <div class="flex w-full justify-between">
-          <h2>WIFI Dải Tần</h2>
-          <h2>2.4Ghz</h2>
+          <p>WIFI Dải Tần</p>
+          <p>2.4Ghz</p>
         </div>
       </div>
       <div class="tick-item">
@@ -28,20 +28,20 @@
           class="icon-sm"
         />
         <div class="flex w-full justify-between">
-          <h2>WIFI Dải Tần</h2>
-          <h2>5Ghz</h2>
+          <p>WIFI Dải Tần</p>
+          <p>5Ghz</p>
         </div>
       </div>
     </div>
     <div>
-      <h1 class="font-semibold">Phân Bố</h1>
+      <h6 class="font-semibold">Phân Bố</h6>
       <div class="tick-item">
         <Icon
           name="icon-park-outline:correct"
           color="#32CD32"
           class="icon-sm"
         />
-        <h1>Mỗi Tầng Nhiều Mạng</h1>
+        <h6>Mỗi Tầng Nhiều Mạng</h6>
       </div>
       <div class="tick-item">
         <Icon
@@ -49,7 +49,7 @@
           color="#32CD32"
           class="icon-sm"
         />
-        <h2>Kết Nối Liên Tục</h2>
+        <p>Kết Nối Liên Tục</p>
       </div>
       <div class="tick-item">
         <Icon
@@ -57,7 +57,7 @@
           color="#32CD32"
           class="icon-sm"
         />
-        <h2>Tốc Độ Ổn Định</h2>
+        <p>Tốc Độ Ổn Định</p>
       </div>
     </div>
   </div>

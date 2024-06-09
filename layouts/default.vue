@@ -2,7 +2,7 @@
   <div>
     <DefaultHeader />
     <slot />
-    <DefaultFooter />
+    <!-- <DefaultFooter /> -->
   </div>
 </template>
 
