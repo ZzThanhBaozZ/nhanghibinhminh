@@ -6,8 +6,12 @@ export default defineNuxtConfig({
     "@nuxtjs/svg-sprite",
     "nuxt-icon",
     "@nuxtjs/color-mode",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/i18n",
   ],
+  i18n: {
+    vueI18n: "./i18n.config.ts",
+  },
   colorMode: {
     preference: "system", // default value of $colorMode.preference
     fallback: "light", // fallback value if not system preference found
