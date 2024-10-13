@@ -94,7 +94,7 @@ body {
 
 @layer base {
   h1 {
-    @apply font-black font-bold tracking-widest;
+    @apply font-black tracking-widest;
     font-size: var(--font-size-6xl);
     line-height: calc(var(--font-size-6xl) + 1.2vw);
   }

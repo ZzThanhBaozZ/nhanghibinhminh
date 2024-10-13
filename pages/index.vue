@@ -41,6 +41,9 @@
         </div>
         <figure class="hidden flex-1 justify-end pt-4 lg:flex">
           <NuxtImg
+            loading="lazy"
+            format="webp"
+            quality="75"
             src="/hero.jpg"
             :placeholder="[50, 25, 75, 5]"
             class="hero-img rounded-md border-8"
@@ -214,7 +217,20 @@
 import LocationGroupSecond from "~/components/Location/LocationGroupSecond.vue";
 
 useHead({
-  title: "Nhà Nghỉ Bình Minh",
+  title: "Nhà Nghỉ Bình Minh | Kính Chào Quý Khách",
+  htmlAttrs: {
+    lang: "vi",
+  },
+  meta: [
+    {
+      name: "description",
+      content:
+        "Tọa lạc tại vị trí thuận lợi nhất cho quý du khách muốn thăm quan danh lam thắng cảnh và di tích lịch sử Điện Biên Phủ.",
+    },
+    {
+      charset: "utf-8",
+    },
+  ],
 });
 </script>
 

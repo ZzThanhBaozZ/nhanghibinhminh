@@ -2,6 +2,9 @@
   <div class="mx1 my1">
     <div class="flex flex-col items-center justify-center gap-8">
       <NuxtImg
+        loading="lazy"
+        format="webp"
+        quality="75"
         src="/qr-zalo.png"
         :placeholder="[50, 25, 75, 5]"
         class="w-[10rem] rounded-md border-8"
@@ -10,7 +13,7 @@
         <h6>Số điện thoại: <a href="tel:0915587455">0915587455</a></h6>
       </div>
     </div>
-    <div
+    <!-- <div
       class="relative flex w-full snap-x snap-mandatory gap-6 overflow-x-auto pb-14"
     >
       <div class="shrink-0 snap-center">
@@ -55,7 +58,7 @@
       <div class="shrink-0 snap-center">
         <div class="w-4 shrink-0 sm:w-48"></div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

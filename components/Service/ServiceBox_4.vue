@@ -32,26 +32,27 @@
 </template>
 
 <script lang="ts" setup>
-const First = [
-  { attr1: "Số Lượng Ít", attr2: "" },
-  { attr1: "Số Lượng Vừa", attr2: "" },
-  { attr1: "Số Lượng Lớn", attr2: "" },
-];
+import { First, Second } from "@/composables/RoomData";
+// const First = [
+//   { attr1: "Số Lượng Ít", attr2: "" },
+//   { attr1: "Số Lượng Vừa", attr2: "" },
+//   { attr1: "Số Lượng Lớn", attr2: "" },
+// ];
 
-const Second = [
-  {
-    attr1: "Số Lượng Ít",
-    attr2: "",
-  },
-  {
-    attr1: "Số Lượng Vừa",
-    attr2: "",
-  },
-  {
-    attr1: "Số Lượng Lớn",
-    attr2: "",
-  },
-];
+// const Second = [
+//   {
+//     attr1: "Số Lượng Ít",
+//     attr2: "",
+//   },
+//   {
+//     attr1: "Số Lượng Vừa",
+//     attr2: "",
+//   },
+//   {
+//     attr1: "Số Lượng Lớn",
+//     attr2: "",
+//   },
+// ];
 </script>
 
 <style></style>
